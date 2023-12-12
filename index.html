@@ -1,0 +1,255 @@
+﻿<!DOCTYPE html>
+<html lang="zh">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=5">
+        <title>mlike123 の HomePage</title>
+        <meta name="description" content="这里是我的个人主页，欢迎来访！">
+        <meta name="format-detection" content="telephone=no">
+        <link rel="icon" href="./favicon.ico">
+        <link rel="stylesheet" href="./assets/css/index.css">
+        <link rel="stylesheet"
+              href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.css">
+        <link rel="stylesheet"
+              href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.css">
+        <script type="text/javascript">
+            if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+                alert('不建议使用IE浏览器，建议切换为Chrome浏览器~');
+            }
+        </script>
+    </head>
+
+    <body>
+        <div id="body-wrap">
+            <nav class="not_index_bg" id="nav" style="background-image:url(./assets/images/bg.png)">
+                <div id="page_site-info">
+                    <div id="site-title">
+                        <span class="blogtitle"></span>
+                        <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.12/typed.min.js"></script>
+                        <script>
+                            var typed = new Typed(".blogtitle", {
+                                strings: ['good good study, day day up', 'Stay Hungry Stay Foolish'],
+                                startDelay: 300,
+                                typeSpeed: 100,
+                                loop: true,
+                                backSpeed: 50,
+                                showCursor: true
+                            });
+                        </script>
+                    </div>
+                </div>
+            </nav>
+            <main id="content-outer">
+                <div class="layout_page" id="content-inner">
+                    <div class="aside_content" id="aside_content">
+                        <div class="card-widget card-info">
+                            <div class="card-content">
+                                <div class="card-info-avatar is-center">
+                                    <img class="avatar-img"
+                                         src="./assets/profile_photo.png"
+                                         alt="avatar">
+                                    <div class="author-info__name">mlike123</div>
+                                </div>
+                                <div class="card-info-social-icons is-center">
+                                    <div class="card-info-social-icons is-center">
+                                        <a class="social-icon" href="https://github.com/mlike123" target="_blank">
+                                            <i class="fa fa-github"></i>
+                                        </a>
+                                    </div>
+                                    <!--                                <a class="social-icon" href="javascript:void(0);" onclick="email()"><svg t="1653120990219" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="661" width="24" height="24"><path d="M512 512m-512 0a512 512 0 1 0 1024 0 512 512 0 1 0-1024 0Z" fill="#B3DFFF" p-id="662"></path><path d="M460.334545 509.44a75.869091 75.869091 0 0 0 103.563637 0l266.705454-250.181818A46.545455 46.545455 0 0 0 814.545455 256H209.454545a46.545455 46.545455 0 0 0-16.756363 3.258182zM857.134545 739.374545A46.545455 46.545455 0 0 0 861.090909 721.454545V302.545455a46.545455 46.545455 0 0 0-4.654545-20.247273l-235.287273 221.090909z" fill="#439DFF" p-id="663"></path><path d="M595.781818 527.36l-8.145454 7.68a110.778182 110.778182 0 0 1-151.272728 0l-8.145454-7.68L191.534545 764.043636A46.545455 46.545455 0 0 0 209.454545 768h605.09091a46.545455 46.545455 0 0 0 18.618181-3.956364zM167.563636 282.996364A46.545455 46.545455 0 0 0 162.909091 302.545455v418.90909a46.545455 46.545455 0 0 0 3.956364 18.618182l235.985454-236.683636z" fill="#439DFF" p-id="664"></path></svg></a>-->
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-widget card-announcement">
+                            <div class="card-content">
+                                <div class="item-headline">
+                                    <i class="fa fa-link" aria-hidden="true"></i>
+                                    <span>Notice</span>
+                                </div>
+                                <div id="announcement">
+                                    <p>This is my personal homepage,</p>
+                                    <p> I will update and improve my blog later! </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="card-widget card-webinfo">
+                            <div class="card-content">
+                                <div class="item-headline">
+                                    <i class="fa fa-line-chart" aria-hidden="true"></i>
+                                    <span>Page Information</span>
+                                </div>
+                                <div class="webinfo">
+                                    <div class="webinfo-item">
+                                        <div class="webinfo-site-name">Visits：</div>
+                                        <div class="webinfo-site-pv-count">
+                                            <span id="span_count"></span>
+                                            <script language=javascript>
+                                                if (localStorage.pagecount) {
+                                                    localStorage.pagecount = Number(localStorage.pagecount) + 1;
+                                                } else {
+                                                    localStorage.pagecount = 1;
+                                                }
+                                                span_count.innerHTML = localStorage.pagecount;
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <div class="webinfo-item">
+                                        <div class="webinfo-site-name">Running state：</div>
+                                        <div class="webinfo-site-pv-count">🟢 Normal</div>
+                                        <!--                                     <div class="webinfo-site-pv-count" id="">🟠 卡顿</div>-->
+                                        <!--                                     <div class="webinfo-site-pv-count" id="">🔴 严重错误</div>-->
+                                    </div>
+                                    <div class="webinfo-item">
+                                        <div class="webinfo-site-name">-----</div>
+                                        <div class="webinfo-site-pv-count">-----</div>
+                                    </div>
+                                    <div class="webinfo-item">
+                                        <div class="webinfo-site-name">Already running:</div>
+                                        <div class="webinfo-site-pv-count">
+                                            <span id=span_time>未知</span>
+                                            <script language=javascript>
+                                                window.setTimeout("show_date_time()", 1000);
+                                                BirthDay = new Date("12/12/2023 18:00:00");
+                                                today = new Date();
+                                                timeold = (today.getTime() - BirthDay.getTime());
+                                                sectimeold = timeold / 1000
+                                                secondsold = Math.floor(sectimeold);
+                                                msPerDay = 24 * 60 * 60 * 1000
+                                                e_daysold = timeold / msPerDay
+                                                daysold = Math.floor(e_daysold);
+                                                e_hrsold = (e_daysold - daysold) * 24;
+                                                hrsold = Math.floor(e_hrsold);
+                                                e_minsold = (e_hrsold - hrsold) * 60;
+                                                minsold = Math.floor((e_hrsold - hrsold) * 60);
+                                                seconds = Math.floor((e_minsold - minsold) * 60);
+                                                span_time.innerHTML = '<style=color:#C40000>' + daysold + '</> days <style=color:#C40000>' + hrsold + '</> hours <style=color:#C40000>' + '<br />' + minsold + '</> minutes <style=color:#C40000>' + seconds + '</> seconds';
+                                            </script>
+                                        </div>
+                                    </div>
+                                    <br/>
+                                    <div class="webinfo-item">
+                                        <div class="webinfo-site-name">Current Page URL</div>
+                                        <div class="webinfo-site-pv-count" style="user-select: text" id="">
+                                            <span id="span_url">[ <a href="javascript:void(0);" onclick="page_url()"
+                                                                     style="color: orange;">Browse</a> ] [ <a
+                                                    href="javascript:void(0);" onclick="copy(url)"
+                                                    style="color: orange;">Copy</a> ]</span>
+                                            <script>
+                                                var url = window.location.href;
+                                                // span_url.innerHTML=url
+                                            </script>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <article id="page" class="pageContent">
+                        <div class="article-container">
+                            <div>
+                                <h2>Personal Information</h2>
+                                <div class="Information" style="font-size: 16px">
+
+                                    <li  style='color:#f0dd7c'>The avatar is from the NFT 《sprotoladyn》 project Address：
+                                        <a style='color:#0f59a4'>https://opensea.io/collection/sprotoladyn</a>
+                                    </li>
+                                    <li style='color:#645822'>
+                                        Currently working as a full stack java software development engineer
+                                    </li>
+                                    <li style='color:#645822'>Go for it! Working on learning about blockchain
+                                    </li>
+                                </div>
+                            </div>
+                            <div>
+                                <h2>Learning Programs</h2>
+                                <div style="font-size: 16px">
+                                    Solidity、Rust、The blockchain principle
+                                </div>
+                            </div>
+                            <hr>
+                            <div>
+                                <h2>Achievements</h2>
+                                <div>
+                                    <h3>Projects</h3>
+                                    <a href="#">to be supplemented</a>
+                                </div>
+                                <div>
+                                    <h3>Projects</h3>
+                                    <a href="#">to be supplemented</a>
+                                </div>
+                                <div>
+                                    <h3>Projects</h3>
+                                    <a href="#">to be supplemented</a>
+                                </div>
+                            </div>
+                            <hr>
+                        </div>
+                    </article>
+                </div>
+            </main>
+            <footer id="footer" class="footer">
+                <div id="footer-wrap">
+                    CopyRight@2022-2025&copy;mlike123.com<br>
+                </div>
+            </footer>
+        </div>
+        <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/typed.js/2.0.12/typed.js"></script>
+        <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/fancybox/3.5.7/jquery.fancybox.js"></script>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/instant.page/5.1.0/instantpage.js"
+                type="module"></script>
+        <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/lazysizes/5.3.2/lazysizes.min.js" async></script>
+        <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/sweetalert/2.1.2/sweetalert.min.js"></script>
+
+        <!-- APlayer -->
+        <link rel="stylesheet" href="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.css">
+        <script src="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-1-M/aplayer/1.10.1/APlayer.min.js"></script>
+        <!-- MetingJS -->
+        <script src="../assets/js/meting.js"></script>
+
+        <!-- nplayer -->
+        <script src="https://unpkg.com/nplayer@latest/dist/index.min.js"></script>
+
+        <script>
+            /* 复制内容 */
+            function copy(data) {
+                let input = document.createElement("input");
+                input.setAttribute("readonly", "readonly");
+                input.value = data;
+                document.body.appendChild(input);
+                input.select();
+                document.execCommand("Copy");
+                document.body.removeChild(input);
+                swal("Copy success!");
+            }
+
+            /* 显示URL */
+            function page_url() {
+                swal({
+                    title: "URL",
+                    text: url,
+                })
+            }
+
+            /* 显示邮箱 */
+            function email() {
+                swal({
+                    title: "E-mail",
+                    text: "taozi.n@qq.com",
+                    buttons: ["Copy", true],
+                })
+                    .then((OK) => {
+                        if (OK) {
+                        } else {
+                            copy("taozi.n@qq.com");
+                        }
+                    });
+            }
+        </script>
+
+    </body>
+
+</html>
